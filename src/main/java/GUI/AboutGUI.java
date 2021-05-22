@@ -6,7 +6,7 @@ import java.awt.*;
 public class AboutGUI extends BusGUI{
 
     public static BusGUI about(){
-        BusGUI window = new BusGUI(340, 480, "정보", null , 270, 220);
+        BusGUI window = new BusGUI(340, 480, "정보", Resources.IMG_INFO , 270, 220);
         window.setLayout(new GridLayout(3,1,3,3));
 
         JPanel panel1 = new JPanel();
@@ -27,7 +27,7 @@ public class AboutGUI extends BusGUI{
 
 
         JPanel panel2 = new JPanel();
-        panel2.setLayout(new GridLayout(2,2,2,2));
+        panel2.setLayout(new GridLayout(2,1,2,2));
         JLabel developer1 = new JLabel("개발자");
         developer1.setHorizontalAlignment(JLabel.CENTER);
         developer1.setFont(Resources.nsq(Resources.FONT_BOLD, 30));
@@ -44,7 +44,7 @@ public class AboutGUI extends BusGUI{
 
 
         JPanel panel3 = new JPanel();
-        panel3.setLayout(new GridLayout(2,2,2,2));
+        panel3.setLayout(new GridLayout(2,1,2,2));
         JLabel credit1 = new JLabel("크레딧");
         credit1.setHorizontalAlignment(JLabel.CENTER);
         credit1.setFont(Resources.nsq(Resources.FONT_BOLD, 30));

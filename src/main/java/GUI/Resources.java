@@ -59,6 +59,7 @@ public class Resources {
     static final String IMG_STOP1 = "stop1.png";
     static final String IMG_STOP2 = "stop2.png";
     static final String IMG_EMPTY = "empty.png";
+    static final String IMG_INFO = "info.png";
 
     // Icon
     // 정상 비율 아이콘: 버튼, 라벨
