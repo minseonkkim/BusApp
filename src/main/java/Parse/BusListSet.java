@@ -7,10 +7,11 @@ import org.json.simple.JSONObject;
 
 
 public class BusListSet {
-    public static HashMap<Integer, Parse.BusList> buslist;
+    public static HashMap<Integer, BusList> buslist;
     public static int size;
+    public static String sizeString;
 
-    public static HashMap<Integer, Parse.BusList> getBusLists(){
+    public static HashMap<Integer, BusList> getBusLists(){
 
         if(buslist!=null) return buslist;
 
@@ -19,13 +20,13 @@ public class BusListSet {
         size = Integer.parseInt(jsonObject.get("ROW_COUNT").toString());
         buslist = new HashMap<>();
         for(int i=0; i<size; i++) {
-            Parse.BusList b = new Parse.BusList((JSONObject)jsonArray.get(i));
+            BusList b = new BusList((JSONObject)jsonArray.get(i));
             buslist.put(b.getLineId(), b);
         }
         return buslist;
     }
 
-    public static void BusListPrint(HashMap<Integer, Parse.BusList> buslist) {
+    public static void BusListPrint(HashMap<Integer, BusList> buslist) {
         if (buslist != null) {
             for(int i=0; i< 1000; i++) {
                 if (buslist.get(i) != null) {
@@ -33,6 +34,6 @@ public class BusListSet {
                 }
             }
         }
-
     }
+
 }
