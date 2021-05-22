@@ -42,6 +42,7 @@ public class BusGUI extends JFrame {
     public static BusGUI mainMenu(){
         BusGUI window=new BusGUI(1280, 720, "Bus Information System", Resources.IMG_BUS_ORANGE, 320, 180);
         window.mainContainer.setLayout(new BorderLayout(0,0));
+        window.setLocationRelativeTo(null);
 
         window.add(mainCenter(), BorderLayout.CENTER);
         window.add(mainTop(), BorderLayout.NORTH);
@@ -188,6 +189,7 @@ public class BusGUI extends JFrame {
 
     private static BusGUI stopSelection(){
         BusGUI window=new BusGUI(640, 720, "정류장 검색", Resources.IMG_STOP1, 320, 180);
+        window.setLocationRelativeTo(null);
         window.setMinimumSize(new Dimension(320, 360));
         return insetWindow(window, SelectionInner(TYPE_STOP), 1, 10, 10, 10);
     }
@@ -464,6 +466,7 @@ public class BusGUI extends JFrame {
 
     private static BusGUI lineSelection(){
         BusGUI window=new BusGUI(640, 720, "노선 검색", Resources.IMG_BUS_ORANGE, 960, 180);
+        window.setLocationRelativeTo(null);
         window.setMinimumSize(new Dimension(320, 360));
         return insetWindow(window, SelectionInner(TYPE_LINE), 1, 10, 10, 10);
     }

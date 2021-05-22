@@ -8,6 +8,7 @@ public class AboutGUI extends BusGUI{
     public static BusGUI about(){
         BusGUI window = new BusGUI(340, 480, "정보", Resources.IMG_INFO , 270, 220);
         window.setLayout(new GridLayout(3,1,3,3));
+        window.setLocationRelativeTo(null);
 
         JPanel panel1 = new JPanel();
         panel1.setLayout(new GridLayout(2,1,2,2));
