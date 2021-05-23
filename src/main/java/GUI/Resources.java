@@ -63,6 +63,7 @@ public class Resources {
     static final String IMG_VERSION = "version.png";
     static final String IMG_DEVELOPER = "developer.png";
     static final String IMG_CREDIT = "credit.png";
+    static final String IMG_LICENSE = "license.png";
 
 
     // Icon
