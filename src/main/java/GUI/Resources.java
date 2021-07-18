@@ -7,6 +7,8 @@ import java.util.ArrayList;
 
 public class Resources {
 
+
+
     // 테스트를 위한 배열
     public static String[][] testArray(int size){
         String[][] array=new String[2][size];
@@ -22,18 +24,15 @@ public class Resources {
     public static String[][] search(String[][] list, String what){
 
         ArrayList<String[]> found=new ArrayList<>();
+        for (int i=0; i<list.length; i++) if(list[i][1].contains(what) || list[i][0].contains(what)) found.add(list[i]);
 
-        for (int i=0; i<list[0].length; i++){
-            if(list[1][i].contains(what)) found.add(new String[]{list[0][i], list[1][i]});
-        }
-        String[][] find=new String[2][found.size()];
-        for (int i=0; i<found.size(); i++){
-            find[0][i]=found.get(i)[0];
-            find[1][i]=found.get(i)[1];
-        }
+        String[][] find=new String[found.size()][2];
+        for (int i=0; i<found.size(); i++) find[i]=found.get(i);
+
         return find;
     }
 
+    @Deprecated
     // 리스트에서 해당 문자열의 번호를 반환
     public static int[] searchIndex(String[][] list, String what){
         ArrayList<Integer> found=new ArrayList<>();
@@ -48,7 +47,6 @@ public class Resources {
         return find;
     }
 
-
     // Image
     static final String IMG_BUS_ORANGE = "bus1.png";
     static final String IMG_BUS_ORANGE2 = "bus2.png";
@@ -59,12 +57,23 @@ public class Resources {
     static final String IMG_STOP1 = "stop1.png";
     static final String IMG_STOP2 = "stop2.png";
     static final String IMG_EMPTY = "empty.png";
-    static final String IMG_INFO = "info.png";
-    static final String IMG_VERSION = "version.png";
-    static final String IMG_DEVELOPER = "developer.png";
-    static final String IMG_CREDIT = "credit.png";
-    static final String IMG_LICENSE = "license.png";
+    static final String IMG_FAV_YES = "fav_y.png";
+    static final String IMG_FAV_NO = "fav_n.png";
+    static final String IMG_FAV_REFRESH = "refresh.png";
 
+    static final String IMG_INFO = "info.png";
+    static final String IMG_LICENSE = "license.png";
+    static final String IMG_DEVELOPER = "dev.png";
+    static final String IMG_VERSION = "ver.png";
+
+    static final String IMG_HELP = "help.png";
+    static final String IMG_STOPIMG1 ="stopimg1.PNG";
+    static final String IMG_STOPIMG3 ="stopimg3.PNG";
+    static final String IMG_LINEIMG1 = "lineimg1.PNG";
+    static final String IMG_LINEIMG2 = "lineimg2.PNG";
+    static final String IMG_FAVORIMG ="favorimg.PNG";
+    static final String IMG_FAVORIMG2 ="favorimg2.png";
+    static final String IMG_INFOIMG ="infoimg.PNG";
 
     // Icon
     // 정상 비율 아이콘: 버튼, 라벨
@@ -94,6 +103,7 @@ public class Resources {
     static final Color COLOR_PURPLE = new Color(112, 48, 160);
     static final Color COLOR_BLUE_DARK = new Color(0, 112, 192);
     static final Color COLOR_PINK = new Color(238,150,200);
+    static final Color COLOR_PINK_DARK = new Color(255,51,153);
 
     static final Color COLOR_RED_BUS = new Color(255, 84, 84);
     static final Color COLOR_YELLOW_BUS = new Color(255, 153, 0);
